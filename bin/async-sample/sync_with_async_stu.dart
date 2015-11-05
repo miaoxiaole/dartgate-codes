@@ -56,16 +56,16 @@ Future<int> stu3_recharge() async {
   return aNum;
 }
 
-int stu6_recharge(){
+ stu6_recharge()async{
   int balance;
   for (int i = 0;i < 70;i++) {
     balance = i;
   }
   return balance;
 }
-Future<int> stu0_recharge() async {
+Future<int> stu0_recharge() async{
   int aNum;
-  for (int i = 0;i < 11000000;i++) {
+  for (int i = 0;i < 11000000;i++){
     aNum = i;
   }
   return aNum;
