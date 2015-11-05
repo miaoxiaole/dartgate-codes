@@ -4,12 +4,13 @@ import "dart:async";
  * 后才能执行。因此有成了*同步*模式
  */
 main() async{
+  stu0();
   stu1();
   stu2();
+  stu6();
   await stu3();
   stu4();
   stu5();
-  await stu6();
   stu7();
   stu8();
   stu9();
@@ -32,6 +33,10 @@ void stu9() => print("stu9 done");
 
 void stu10() => print("stu10 done");
 
+Future stu0() async{
+  int aNum = await stu0_recharge();
+  print("stu0 done,recharge:" + aNum.toString());
+}
 
 Future stu3() async{
   int aNum = await stu3_recharge();
@@ -45,17 +50,23 @@ Future stu6() async{
 
 Future<int> stu3_recharge() async {
   int aNum;
-  for (int i = 0;i < 10000000;i++) {
+  for (int i = 0;i < 10;i++) {
     aNum = i;
   }
-
   return aNum;
 }
 
-int stu6_recharge() {
+int stu6_recharge(){
   int balance;
-  for (int i = 0;i < 10000;i++) {
+  for (int i = 0;i < 70;i++) {
     balance = i;
   }
   return balance;
+}
+Future<int> stu0_recharge() async {
+  int aNum;
+  for (int i = 0;i < 11000000;i++) {
+    aNum = i;
+  }
+  return aNum;
 }

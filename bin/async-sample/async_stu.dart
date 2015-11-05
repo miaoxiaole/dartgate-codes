@@ -7,6 +7,7 @@ main() {
   stu1();
   stu2();
   stu3();
+  //stu3_recharge().then((c)=>print(c.toString()));
   stu4();
   stu5();
   stu6();
@@ -33,28 +34,26 @@ void stu9() => print("stu9 done");
 void stu10() => print("stu10 done");
 
 
-Future stu3() async{
+ stu3() async{
   int aNum = await stu3_recharge();
   print("stu3 done,recharge:" + aNum.toString());
 }
 
-Future stu6() async{
+ stu6() async{
   int aDouble = await stu6_recharge();
   print("stu6 done,recharge:"+ aDouble.toString());
 }
-
-Future<int> stu3_recharge() async {
+stu3_recharge() async {
   int aNum;
-  for (int i = 0;i < 10000000;i++) {
+  for (int i = 0;i < 10000;i++) {
     aNum = i;
   }
-
   return aNum;
 }
 
-int stu6_recharge() {
+Future<int> stu6_recharge() async{
   int balance;
-  for (int i = 0;i < 10000;i++) {
+  for (int i = 0;i < 1000;i++) {
     balance = i;
   }
   return balance;
